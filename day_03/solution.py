@@ -1,6 +1,7 @@
 import re
-#
-f = [x.strip() for x in open("input_2.txt").readlines()]
+
+f = [x.strip() for x in open("input.txt").readlines()]
+f = ["".join(f)]
 a = 0
 for line in f:
     matches = re.findall(r'mul\(\d+,\d+\)', line)
@@ -9,8 +10,8 @@ for line in f:
         right = int(mat[mat.index(",") + 1:][:-1])
         a += (left * right)
 print(a)
-p2 = 0
 
+p2 = 0
 for line in f:
     dos = [x.span()[0] for x in re.finditer(r'do\(\)', line)]
     donts = [x.span()[0] for x in re.finditer(r"don't\(\)", line)]
@@ -33,7 +34,6 @@ for line in f:
             en_map[a] = False
     for mindex, mat in zip(mul_indexes, muls):
         if en_map[mindex]:
-            # print(mat)
             left = int(mat[4:mat.index(",")])
             right = int(mat[mat.index(",") + 1:][:-1])
             p2 += (left * right)
