@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="be9f20ab-07ab-4b2b-8695-da97014d876b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/day_04/solution.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -39,13 +40,13 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/nirmitshah/Development/Advent-of-Code-2024/day_03"
+    "last_opened_file_path": "/Users/nirmitshah/Development/Advent-of-Code-2024"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/day_03" />
       <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/day_03" />
     </key>
   </component>
   <component name="SharedIndexes">
