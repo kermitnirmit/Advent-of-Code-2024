@@ -1,11 +1,8 @@
 from collections import defaultdict
-from utils import ints
+from utils import ints, valid_point_on_2d_grid
 from itertools import combinations
 
 f = [x for x in open("input.txt").read().strip().splitlines()]
-
-def valid_point(i, j):
-    return 0 <= i < len(f) and 0 <= j < len(f[0])
 
 nodes = defaultdict(list)
 for i, line in enumerate(f):
@@ -17,9 +14,9 @@ anti_nodes = set()
 for node in nodes:
     for a, b in combinations(nodes[node], 2):
         di, dj = a[0] - b[0], a[1] - b[1]
-        if valid_point(a[0] + di, a[1] + dj):
+        if valid_point_on_2d_grid(a[0] + di, a[1] + dj, f):
             anti_nodes.add((a[0] + di, a[1] + dj))
-        if valid_point(b[0] - di, b[1] - dj):
+        if valid_point_on_2d_grid(b[0] - di, b[1] - dj, f):
             anti_nodes.add((b[0] - di, b[1] - dj))
 print(len(anti_nodes))
 
@@ -32,12 +29,12 @@ for node in nodes:
         anti_nodes.add(a)
         anti_nodes.add(b)
         ci, cj = a
-        while valid_point(ci + di, cj + dj):
+        while valid_point_on_2d_grid(ci + di, cj + dj, f):
             anti_nodes.add((ci + di, cj + dj))
             ci += di
             cj += dj
         ci, cj = b
-        while valid_point(ci - di, cj - dj):
+        while valid_point_on_2d_grid(ci - di, cj - dj, f):
             anti_nodes.add((ci - di, cj - dj))
             ci -= di
             cj -= dj

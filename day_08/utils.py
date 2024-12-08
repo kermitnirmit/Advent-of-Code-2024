@@ -15,6 +15,8 @@ import z3
 
 readline = lambda x: open("../day_04/input.txt").read().strip().split("\n")
 
+def valid_point_on_2d_grid(i, j, grid):
+    return 0 <= i < len(grid) and 0 <= j < len(grid[0])
 
 def lmap(func, *iterables):
     return list(map(func, *iterables))
