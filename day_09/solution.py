@@ -37,7 +37,7 @@ def p1():
                 while q[-1] == ".":
                     q.pop()
                 ret.append(q.pop())
-        elif cur != ".":
+        else:
             ret.append(cur)
     return checksum(ret)
 print(p1())
