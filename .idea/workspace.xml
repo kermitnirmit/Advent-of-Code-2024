@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="be9f20ab-07ab-4b2b-8695-da97014d876b" name="Changes" comment="" />
+    <list default="true" id="be9f20ab-07ab-4b2b-8695-da97014d876b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/Advent-of-Code-2024.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Advent-of-Code-2024.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
