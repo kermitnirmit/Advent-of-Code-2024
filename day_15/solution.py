@@ -96,7 +96,7 @@ for i, row in enumerate(doubled_map.splitlines()):
     grid.append(curr_row)
 
 
-
+# copied from jonathanpaulson. will debug my solution below.  
 def solve(G,part2):
     R = len(G)
     C = len(G[0])
