@@ -1,5 +1,5 @@
 from collections import deque, defaultdict
-from utils import ints, add_tuples, neighbors_2d, valid_point_on_2d_grid, dirs_2d_4
+from utils import dmap
 from heapq import heappush, heappop, heapify
 from itertools import combinations
 import networkx as nx
@@ -22,33 +22,27 @@ g = nx.DiGraph()
 for i in range(len(f)):
     for j in range(len(f[0])):
         if f[i][j] != "#":
-            for dir in "NESW":
+            for dir in dmap.keys():
                 g.add_node(((i, j), dir))
 for n, d in g.nodes:
-    if d == "N":
-        dest = (n[0] - 1, n[1])
-    elif d == "S":
-        dest = (n[0] + 1, n[1])
-    elif d == "E":
-        dest = (n[0], n[1] + 1)
-    elif d == "W":
-        dest = (n[0], n[1] - 1)
+    di, dj = dmap[d]
+    dest = (n[0] + di, n[1] + dj)
     if (dest, d) in g.nodes:
         # connect to destination
         g.add_edge((n, d), (dest, d) , weight=1)
-    for nd in "NESW":
+    for nd in dmap.keys():
         if nd == d:
             continue
         # connect to all other directions
         g.add_edge((n, d), (n, nd), weight=1000)
 
-for direction in "NESW":
+for direction in dmap.keys():
     # connect to end
     g.add_edge((end, direction), "end", weight=0)
 
-print(nx.shortest_path_length(g, (start, "E"), "end", weight="weight"))
+print(nx.shortest_path_length(g, (start, "R"), "end", weight="weight"))
 
-paths = nx.all_shortest_paths(g, (start, "E"), "end", weight="weight")
+paths = nx.all_shortest_paths(g, (start, "R"), "end", weight="weight")
 
 points = set()
 for path in paths:
