@@ -195,7 +195,7 @@ print(p1)
 # print(p1)
 
 
-
+# https://github.com/marcodelmastro/AdventOfCode2024/blob/main/Day21.ipynb
 num_pad = nx.DiGraph()
 num_pad.add_edges_from([("A", "0"), ("A", "3")])
 num_pad.add_edges_from([("0", "2"), ("0", "A")])
